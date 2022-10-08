@@ -1,0 +1,124 @@
+<section style="background-color: #2779e2;">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-8">
+
+                <h1 class="text-white">Claim Submission</h1>
+
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body">
+
+                        <div class="row align-items-center">
+                            <div class="col-sm-3">
+
+                                <h6 class="mb-0">ClaimType</h6>
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <input type="text" [(ngModel)]=claim.claimType class="claimType"
+                                    class="form-control form-control-lg" />
+
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row align-items-center">
+                            <div class="col-sm-3">
+
+                                <h6 class="mb-0">ClaimAmount</h6>
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <input type="text" [(ngModel)]=claim.claimAmount class="claimAmount"
+                                    class="form-control form-control-lg" />
+
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="row align-items-center">
+                            <div class="col-sm-3">
+
+                                <h6 class="mb-0">ClaimDate</h6>
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <input type="text" [(ngModel)]=claim.claimDate class="claimDate"
+                                    class="form-control form-control-lg" />
+
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row align-items-center">
+
+                            <div class="col-sm-3">
+
+                                <h6 class="mb-0">Remark</h6>
+                               
+                            </div>
+                            
+                            <div class="col-sm-6"> 
+
+                                <input type="text" [(ngModel)]=claim.remark class="remark"
+                                    class="form-control form-control-lg" />
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <button type="submit" (click)="save()" class="btn btn-primary">submit</button>
+                        </div>
+                        
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+
+
+</section>
+
+
+
+
+
+<ol class="list-group list-group-numbered">
+
+    <li *ngFor="let u of claims" class="list-group-item">
+
+        <span>{{u.id}}</span>
+        <br>
+        <span>{{u.claimType}}</span>
+        <br>
+        <span>{{u.claimAmount}}</span>
+        <br>
+        <span>{{u.claimDate}}</span>
+        <br>
+        <span>{{u.remark}}</span>
+
+        <br>
+        <br>
+        
+        <button type="submit" (click)="deletebyid (u.id)" class="btn btn-primary">Delete</button>
+        <br>
+        <!-- <br>
+
+<button type="submit" (click)="update(u.id,u.student)" class="btn btn-primary">Update</button>
+<br> -->
+
+        <br>
+        <br>
+
+
+    </li>
+</ol>

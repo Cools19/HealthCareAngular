@@ -1,0 +1,146 @@
+<section style="background-color: #2779e2;">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-8">
+  
+          <h1 class="text-white">Member Registration</h1>
+  
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body">
+  
+              <div class="row align-items-center">
+                <div class="col-sm-3">
+  
+                  <h6 class="mb-0">First name</h6>
+  
+                </div>
+                <div class="col-sm-6">
+  
+                  <input type="text" [(ngModel)]=member.firstName class="firstName" class="form-control form-control-lg" />
+  
+                </div>
+              </div>
+  
+              <hr>
+  
+              <div class="row align-items-center">
+                <div class="col-sm-3">
+  
+                  <h6 class="mb-0">Last Name</h6>
+  
+                </div>
+                <div class="col-sm-6">
+  
+                  <input type="text"[(ngModel)]=member.lastName class="lastName" class="form-control form-control-lg"/>
+  
+                </div>
+              </div>
+              <hr>
+  
+              <div class="row align-items-center">
+                <div class="col-sm-3">
+  
+                  <h6 class="mb-0">DOB</h6>
+
+                  
+  
+                </div>
+                <div class="col-sm-6">
+ 
+                  <input type="text"[(ngModel)]=member.dob class="dob" class="form-control form-control-lg"/>
+                </div>
+              </div>
+  
+              <hr>
+  
+              <div class="row align-items-center">
+                <div class="col-sm-3">
+  
+                  <h6 class="mb-0">Address</h6>
+                  
+  
+                </div>
+                <div class="col-sm-6">
+  
+                  <input type="text"[(ngModel)]=member.address class="address"  class="form-control form-control-lg"/>
+  
+                </div>
+              </div>
+              <hr>
+  
+              <div class="row align-items-center">
+                <div class="col-sm-3">
+  
+                  <h6 class="mb-0">State</h6>
+
+                  
+  
+                </div>
+                <div class="col-sm-6">
+  
+                  <input type="text"[(ngModel)]=member.state class="state"  class="form-control form-control-lg"/>
+  
+                </div>
+              </div>
+              <hr>
+  
+              <div class="row align-items-center">
+                <div class="col-sm-3">
+  
+                  <h6 class="mb-0">Email</h6>
+  
+                </div>
+                <div class="col-sm-6">
+  
+                  <input type="text"[(ngModel)]=member.email class="Email"  class="form-control form-control-lg"/>
+  
+                </div>
+              </div>
+              
+  
+              <hr>
+  
+              <div class="col-sm-6">
+                <button type="submit" (click)="save()" class="btn btn-primary">Save</button>
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ol class="list-group list-group-numbered">
+
+    <li *ngFor="let u of members" class="list-group-item">
+
+      <span>{{u.id}}</span>
+      <br>
+<span>{{u.firstName}}</span>
+<br>
+<span>{{u.lastName}}</span>
+<br>
+<span>{{u.dob}}</span>
+<br>
+<span>{{u.address}}</span>
+<br>
+<span>{{u.state}}</span>
+<br>
+<br>
+<span>{{u.email}}</span>
+<br>
+<button type="submit" (click)="deletebyid (u.id)" class="btn btn-primary">Delete</button>
+<br>
+<!-- <br>
+
+<button type="submit" (click)="update(u.id,u.student)" class="btn btn-primary">Update</button>
+<br> -->
+
+<br>
+<br>
+
+
+</li>
+</ol>
