@@ -7,7 +7,24 @@
   
           <div class="card" style="border-radius: 15px;">
             <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-sm-3">
   
+                  <h6 class="mb-0">Admins</h6>
+  
+                </div>
+                <div class="col-sm-6">
+  
+                  <select class="form-select form-select-lg" [(ngModel)]=member.adminId>
+                    <option *ngFor="let admin of admins" [value]="admin.id">
+                      <span>{{admin.name}}</span>
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <hr>
+
               <div class="row align-items-center">
                 <div class="col-sm-3">
   
@@ -131,8 +148,12 @@
 <br>
 <span>{{u.email}}</span>
 <br>
-<button type="submit" (click)="deletebyid (u.id)" class="btn btn-primary">Delete</button>
 <br>
+<span>{{u.adminId}}</span>
+<br>
+
+<!-- <button type="submit" (click)="deletebyid (u.id)" class="btn btn-primary">Delete</button>
+<br> -->
 <!-- <br>
 
 <button type="submit" (click)="update(u.id,u.student)" class="btn btn-primary">Update</button>

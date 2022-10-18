@@ -7,5 +7,5 @@ export default class Member {
         city: string = "";
         email:string ="";
         dob:string="";
-    
+        adminId: number=0;
     }

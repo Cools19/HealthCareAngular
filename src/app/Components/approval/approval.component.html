@@ -1,1 +1,34 @@
-<p>approval works!</p>
+<ol class="list-group list-group-numbered">
+
+    <li *ngFor="let u of claims" class="list-group-item">
+
+        <span>{{u.id}}</span>
+        <br>
+        <span>{{u.claimType}}</span>
+        <br>
+        <span>{{u.claimAmount}}</span>
+        <br>
+        <span>{{u.claimDate}}</span>
+        <br>
+        <span>{{u.remark}}</span>
+        <br>
+        <span>{{u.status}}</span>
+
+
+        <br>
+        <br>
+
+        <button type="submit" (click)="approval(u.id)" class="btn btn-primary">Approval</button>
+        <br>
+ 
+        <br>
+
+        <button type="submit" (click)="reject(u.id)" class="btn btn-primary">Reject</button>
+        <br>
+
+        <br>
+        <br>
+
+
+    </li>
+</ol>
